@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import "./css/styles.css"
+import Dashboard from "./Components/Dashboard";
+import Login from "./Components/Login";
+import PortalLayout from "./Components/PortalLayout";
+import Portal from "./Components/Portal";
+import Students from "./Components/Student/Students";
+import CreateStudent from "./Components/Student/CreateStudent";
+import StudentProfile from "./Components/Student/StudentProfile";
+import StudentEdit from "./Components/Student/StudentEdit";
+import Teachers from "./Components/Teacher/Teachers";
+import CreateTeacher from "./Components/Teacher/CreateTeacher";
+import TeacherProfile from "./Components/Teacher/TeacherProfile";
+import TeacherEdit from "./Components/Teacher/TeacherEdit";
+
+// import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+// import "../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login/>}>
+        </Route>
+        <Route path="portal" element={<PortalLayout/>}>
+          <Route path="welcome" element={<Portal/>} />
+          <Route path="dashboard" element={<Dashboard/>} />
+          <Route path="students_data" element={<Students/>} />
+          <Route path="students_create" element={<CreateStudent/>} />
+          <Route path="students_profile/:id" element={<StudentProfile/>} />
+          <Route path="students_edit/:id" element={<StudentEdit />} />
+          <Route path="teachers_data" element={<Teachers />} />
+          <Route path="teachers_create" element={<CreateTeacher />} />
+          <Route path="teachers_profile/:id" element={<TeacherProfile />} />
+          <Route path="teachers_edit/:id" element={<TeacherEdit />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
