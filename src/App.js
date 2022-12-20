@@ -1,6 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import "./css/styles.css"
+import "./fontawesome-free/css/all.css";
+import "./fontawesome-free/js/all.js";
 import Dashboard from "./Components/Dashboard";
 import Login from "./Components/Login";
 import PortalLayout from "./Components/PortalLayout";
@@ -14,8 +16,7 @@ import CreateTeacher from "./Components/Teacher/CreateTeacher";
 import TeacherProfile from "./Components/Teacher/TeacherProfile";
 import TeacherEdit from "./Components/Teacher/TeacherEdit";
 
-// import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
-// import "../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css"
+
 
 function App() {
   return (

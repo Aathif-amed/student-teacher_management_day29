@@ -7,7 +7,11 @@ function Sidebar() {
       <div className="sb-sidenav-menu">
         <div className="nav">
           <div className="sb-sidenav-menu-heading text-dark">Panel</div>
-          <Link to={"/portal/dashboard"} className="nav-link text-white" href="index.html">
+          <Link
+            to={"/portal/dashboard"}
+            className="nav-link text-white"
+            href="index.html"
+          >
             <div className="sb-nav-link-icon">
               <i className="fas fa-tachometer-alt"></i>
             </div>
@@ -25,9 +29,6 @@ function Sidebar() {
               <i className="fas fa-columns"></i>
             </div>
             Teachers
-            <div className="sb-sidenav-collapse-arrow">
-              <i className="fas fa-angle-down"></i>
-            </div>
           </Link>
 
           <Link
@@ -38,12 +39,11 @@ function Sidebar() {
             aria-expanded="false"
             aria-controls="collapsePages"
           >
-            <div className="sb-nav-link-icon">
-              <i className="fas fa-book-open"></i>
+            <div className="sb-nav-link-icon ">
+              <i className="fas fa-columns"></i>
             </div>
             Students
           </Link>
-
         </div>
       </div>
     </nav>
